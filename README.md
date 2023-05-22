@@ -1,3 +1,16 @@
+This is a fork of the next example **api-routes-rest** in the next repo.
+
+There is a problem with query parameter parsing during a server request when a not encoded query parameter with a double // lose one / and is returned incorrect.
+
+- Next 13.2.4 -> the problem does not appear
+- Next 13.3.0 -> the problem appear for the first time
+  - if you run the code in development mode (yarn dev) you get the problem
+  - if you run the code in production mode (yarn build && yarn start) you do not get the problem
+- Next 13.4.3 (latest) -> the problem appear in development and production mode (i didn't check from which version the problem went into production mode too)
+
+
+
+
 # API routes with REST
 
 Next.js ships with [API routes](https://github.com/vercel/next.js#api-routes), which provide an easy solution to build your own `API`. This example shows how it can be used to create your [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) `API`.
